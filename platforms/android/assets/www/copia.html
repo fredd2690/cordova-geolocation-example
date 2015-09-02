@@ -1,0 +1,24 @@
+  function getp(){
+                    console.log("pressed");
+                     try{
+                        navigator.geolocation.getCurrentPosition(onSuccess,onError,{maximumAge: 300000, timeout:10000, enableHighAccuracy : true});
+                            console.log("yeah");
+                        }
+                        catch(err){
+                            console.log("some err:"+err.message);
+                        }
+                }
+
+
+                  function onSuccess(position){
+                console.log("llego");
+                var latitud=document.getElementById("lat");
+                var longitud=document.getElementById("lon");
+                latitud.innerHTML=""+position.coords.latitude;
+                longitud.innerHTML=""+position.coords.longitude;
+
+            }
+
+            function onError(err){
+                console.log("codigo de err:"+err.code+"  msj="+err.message);
+            }

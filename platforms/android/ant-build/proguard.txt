@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class fs.ej.localizacion.CordovaApp { <init>(...); }
+
